@@ -30,7 +30,6 @@ class AllProductsSection extends Component {
 
   getProducts = async () => {
     const {activeOptionId} = this.state
-    console.log(activeOptionId)
     this.setState({
       isLoading: true,
     })
@@ -73,7 +72,6 @@ class AllProductsSection extends Component {
           sortbyOptions={sortbyOptions}
           updateActiveOptionId={this.updateActiveOptionId}
         />
-        <h1 className="products-heading">All Products</h1>
         <ul className="products-list">
           {productsList.map(product => (
             <ProductCard productData={product} key={product.id} />
